@@ -1,0 +1,9 @@
+# Library libqtcurve-cairo is useful only in this package.
+gtk2-engines-qtcurve: package-name-doesnt-match-sonames libqtcurve-cairo*
+
+# Symbols control file for this library is useless.
+gtk2-engines-qtcurve: no-symbols-control-file usr/lib/i386-linux-gnu/libqtcurve-cairo.so*
+
+# This perl script is called by the QtCurve Gtk2 theme, it is not intended
+# to be useful by itself.
+gtk2-engines-qtcurve: script-not-executable usr/share/themes/QtCurve/gtk-2.0/map_kde_icons.pl

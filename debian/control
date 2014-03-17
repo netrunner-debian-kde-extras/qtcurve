@@ -1,0 +1,113 @@
+Source: qtcurve
+Section: kde
+Priority: optional
+Maintainer: Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
+Uploaders: Boris Pek <tehnick@debian.org>
+Build-Depends: cmake,
+               debhelper (>= 9),
+               kdebase-workspace-dev,
+               kdelibs5-dev,
+               libcairo2-dev,
+               libgtk2.0-dev,
+               libqt5svg5-dev,
+               libx11-dev,
+               pkg-kde-tools,
+               qtbase5-dev,
+               qtbase5-private-dev,
+               qtdeclarative5-dev
+Homepage: https://github.com/QtCurve/qtcurve
+Vcs-Git: git://anonscm.debian.org/pkg-kde/kde-extras/qtcurve.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/kde-extras/qtcurve.git
+Standards-Version: 3.9.5
+
+Package: gtk2-engines-qtcurve
+Section: gnome
+Architecture: any
+Depends: ${misc:Depends},
+         ${misc:Pre-Depends},
+         ${perl:Depends},
+         ${shlibs:Depends}
+Recommends: kde-style-qtcurve
+Multi-Arch: same
+Description: QtCurve widget style for applications based on GTK+ 2.x
+ This package contains the QtCurve theme engine for GTK+ 2.x.
+ .
+ This package is most useful when installed together with kde-style-qtcurve.
+ .
+ QtCurve is a set of widget styles for Qt and GTK+ libraries. It provides a
+ consistent look between KDE, GNOME and other applications based on these
+ libraries, which is easy on the eyes and visually pleasing.
+
+Package: kde-style-qtcurve
+Architecture: any
+Depends: ${misc:Depends}, ${misc:Pre-Depends}, ${shlibs:Depends}
+Recommends: kwin-style-qtcurve
+Suggests: gtk2-engines-qtcurve
+Description: QtCurve widget style for applications based on Qt 4.x and Qt 5.x
+ This package contains the QtCurve widget style for Qt 4.x and Qt 5.x.
+ .
+ The corresponding GTK+ theme engine can be found in gtk2-engines-qtcurve
+ package.
+ .
+ QtCurve is a set of widget styles for Qt and GTK+ libraries. It provides a
+ consistent look between KDE, GNOME and other applications based on these
+ libraries, which is easy on the eyes and visually pleasing.
+
+Package: kwin-style-qtcurve
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Recommends: kde-style-qtcurve
+Suggests: gtk2-engines-qtcurve
+Description: QtCurve window decoration for KWin
+ This package contains the QtCurve window decoration for KWin.
+ .
+ The corresponding GTK+ theme engine can be found in gtk2-engines-qtcurve
+ package.
+ .
+ QtCurve is a set of widget styles for Qt and GTK+ libraries. It provides a
+ consistent look between KDE, GNOME and other applications based on these
+ libraries, which is easy on the eyes and visually pleasing.
+
+Package: qtcurve-l10n
+Section: localization
+Architecture: all
+Depends: ${misc:Depends}
+Provides: qtcurve-i18n
+Replaces: qtcurve-i18n
+Conflicts: qtcurve-i18n
+Description: translation files for QtCurve
+ This package contains translation files for QtCurve.
+ .
+ QtCurve is a set of widget styles for Qt and GTK+ libraries. It provides a
+ consistent look between KDE, GNOME and other applications based on these
+ libraries, which is easy on the eyes and visually pleasing.
+
+Package: qtcurve
+Section: metapackages
+Architecture: any
+Depends: gtk2-engines-qtcurve,
+         kde-style-qtcurve,
+         kwin-style-qtcurve,
+         qtcurve-l10n,
+         ${misc:Depends}
+Description: unified widget styles for Qt and GTK+ applications (meta-package)
+ This package installs all packages related with QtCurve:
+  * kde-style-qtcurve
+  * kwin-style-qtcurve
+  * gtk2-engines-qtcurve
+  * qtcurve-l10n
+ .
+ QtCurve is a set of widget styles for Qt and GTK+ libraries. It provides a
+ consistent look between KDE, GNOME and other applications based on these
+ libraries, which is easy on the eyes and visually pleasing.
+
+Package: libqtcurve-utils1
+Architecture: any
+Depends: ${misc:Depends}, ${misc:Pre-Depends}, ${shlibs:Depends}
+Multi-Arch: same
+Description: common library for QtCurve
+ This package contains common library for QtCurve.
+ .
+ QtCurve is a set of widget styles for Qt and GTK+ libraries. It provides a
+ consistent look between KDE, GNOME and other applications based on these
+ libraries, which is easy on the eyes and visually pleasing.

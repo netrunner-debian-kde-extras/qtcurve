@@ -1,0 +1,5 @@
+qtcurve (1.8.18-1) experimental; urgency=medium
+
+  * Initial release.  (Closes: #726767)
+
+ -- Boris Pek <tehnick@debian.org>  Tue, 18 Mar 2014 00:22:08 +0400

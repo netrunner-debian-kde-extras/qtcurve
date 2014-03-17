@@ -1,0 +1,2 @@
+version=3
+https://github.com/QtCurve/qtcurve/tags .*/QtCurve/qtcurve/archive/(.+\d)\.tar\.gz debian uupdate
