@@ -106,7 +106,7 @@ Depends: gtk2-engines-qtcurve,
          ${misc:Depends}
 Recommends: kde-style-qtcurve-qt5
 Description: unified widget styles for Qt and GTK+ applications (meta-package)
- This meta-package installs all packages related with QtCurve.
+ This package installs all packages related with QtCurve.
  .
  QtCurve is a set of widget styles for Qt and GTK+ libraries. It provides a
  consistent look between KDE, GNOME and other applications based on these
