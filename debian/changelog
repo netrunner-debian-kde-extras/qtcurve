@@ -1,3 +1,11 @@
+qtcurve (1.8.18-2) experimental; urgency=medium
+
+  * Move Qt5 style into separate package kde-style-qtcurve-qt5.
+  * Package qtcurve now recommends kde-style-qtcurve-qt5.
+  * Update description of package qtcurve.
+
+ -- Boris Pek <tehnick@debian.org>  Tue, 18 Mar 2014 13:49:00 +0400
+
 qtcurve (1.8.18-1) experimental; urgency=medium
 
   * Initial release.  (Closes: #726767)
