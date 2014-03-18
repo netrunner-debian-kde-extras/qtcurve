@@ -57,6 +57,7 @@ Package: kde-style-qtcurve-qt5
 Architecture: any
 Depends: ${misc:Depends}, ${misc:Pre-Depends}, ${shlibs:Depends}
 Recommends: kde-style-qtcurve
+Multi-Arch: same
 Description: QtCurve widget style for applications based on Qt 5.x
  This package contains the QtCurve widget style for Qt 5.x.
  .
