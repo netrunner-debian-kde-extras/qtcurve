@@ -104,6 +104,7 @@ Depends: gtk2-engines-qtcurve,
          kwin-style-qtcurve,
          qtcurve-l10n,
          ${misc:Depends}
+Recommends: kde-style-qtcurve-qt5
 Description: unified widget styles for Qt and GTK+ applications (meta-package)
  This package installs all packages related with QtCurve:
   * kde-style-qtcurve
