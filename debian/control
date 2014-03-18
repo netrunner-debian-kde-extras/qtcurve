@@ -43,8 +43,22 @@ Architecture: any
 Depends: ${misc:Depends}, ${misc:Pre-Depends}, ${shlibs:Depends}
 Recommends: kwin-style-qtcurve
 Suggests: gtk2-engines-qtcurve
-Description: QtCurve widget style for applications based on Qt 4.x and Qt 5.x
- This package contains the QtCurve widget style for Qt 4.x and Qt 5.x.
+Description: QtCurve widget style for applications based on Qt 4.x
+ This package contains the QtCurve widget style for Qt 4.x.
+ .
+ The corresponding GTK+ theme engine can be found in gtk2-engines-qtcurve
+ package.
+ .
+ QtCurve is a set of widget styles for Qt and GTK+ libraries. It provides a
+ consistent look between KDE, GNOME and other applications based on these
+ libraries, which is easy on the eyes and visually pleasing.
+
+Package: kde-style-qtcurve-qt5
+Architecture: any
+Depends: ${misc:Depends}, ${misc:Pre-Depends}, ${shlibs:Depends}
+Recommends: kde-style-qtcurve
+Description: QtCurve widget style for applications based on Qt 5.x
+ This package contains the QtCurve widget style for Qt 5.x.
  .
  The corresponding GTK+ theme engine can be found in gtk2-engines-qtcurve
  package.
