@@ -1,4 +1,1 @@
-usr/lib/*/gtk-2.0/*
-usr/lib/*/libqtcurve-cairo.so.*
-usr/share/themes/QtCurve/gtk-2.0/*
-usr/share/themes/QtCurve/mozilla/*
+usr/lib/*/gtk-2.0

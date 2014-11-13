@@ -1,20 +1,11 @@
 #!/usr/bin/make -f
+# -*- makefile -*-
 
-PACKAGE = qtcurve
-
-DEBIAN_PATH := $(abspath $(dir $(MAKEFILE_LIST)))
-USCAN_REPORT = $(shell uscan --noconf --report --dehs "$(DEBIAN_PATH)")
-CUR_VER = $(shell echo "$(USCAN_REPORT)" | sed -n 's/.*<upstream-version>\(.*\)<\/upstream-version>.*/\1/p')
-CUR_URL = $(shell echo "$(USCAN_REPORT)" | sed -n 's/.*<upstream-url>\(.*\)<\/upstream-url>.*/\1/p')
-
-DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
-LDFLAGS += -Wl,--as-needed
-
-%:
-	dh $@ --parallel --list-missing --with kde
+include /usr/share/pkg-kde-tools/qt-kde-team/2/debian-qt-kde.mk
 
 override_dh_auto_configure:
-	dh_auto_configure -- -DLIB_INSTALL_DIR="/usr/lib/$(DEB_HOST_MULTIARCH)"
+	$(overridden_command) -- -DQT_QMAKE_EXECUTABLE=/usr/bin/qmake-qt4 -DCMAKE_INSTALL_PREFIX=/usr -DENABLE_QT5=on
 
-get-orig-source:
-	wget -c "$(CUR_URL)" -O "$(PACKAGE)_$(CUR_VER).orig.tar.gz"
+override_dh_fixperms:
+	chmod +x debian/kde-style-qtcurve4/usr/share/themes/QtCurve/gtk-2.0/map_kde_icons.pl
+	$(overridden_command)

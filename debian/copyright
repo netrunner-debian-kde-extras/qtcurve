@@ -1,105 +1,50 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Debianized-By: Boris Pek <tehnick-8@mail.ru>
-Debianized-Date: Mon, 17 Mar 2014 15:52:04 +0400
-Upstream-Name: QtCurve
-Upstream-Contact: Yichao Yu <yyc1992@gmail.com>
-Source: https://github.com/QtCurve/qtcurve/tags
- The orig.tar.gz is just renamed upstream tarball (without changes).
- See section get-orig-source in debian/rules file for details.
+Upstream-Name: qtcurve
+Source: https://github.com/QtCurve/qtcurve
 
 Files: *
-Copyright: 2003-2011 Craig Drummond <craig.p.drummond@googlemail.com>
-           2012-2014 Yichao Yu <yyc1992@gmail.com>
-           2003-2005 Sandro Giessl <sandro@giessl.com>
-           2001 Rik Hemsley (rikkus) <rik@kde.org>
-           2007 Matthew Woehlke <mw_triad@users.sourceforge.net>
-           2008 Long Huynh Huu <long.upcase@gmail.com>
-           2007 Thomas Luebking <thomas.luebking@web.de>
-License: LGPL-2.1 or LGPL-3+
-
-Files: qt4/kwin/qtcurvesizegrip.*
-       qt4/kwin/qtcurveshadowcache.*
-       qt*/style/blurhelper.*
-       qt*/style/shadowhelper.*
-       qt*/style/windowmanager.*
-       qt4/style/fixx11h.h
-Copyright: 2009-2010 Hugo Pereira Da Costa <hugo.pereira@free.fr>
-           2007-2010 Craig Drummond <craig.p.drummond@gmail.com>
-           2007 Thomas Luebking <thomas.luebking@web.de>
-           2003 Lubos Lunak <l.lunak@kde.org>
-           2013-2014 Yichao Yu <yyc1992@gmail.com>
-License: LGPL-2.1 or LGPL-3+ or Expat
-
-Files: cmake/*
-       lib/utils/uthash.h
-Copyright: 2013-2014 Yichao Yu <yyc1992@gmail.com>
-           2006 Chusslove Illich <caslav.ilic@gmx.net>
-           2007 Alexander Neundorf <neundorf@kde.org>
-           2003-2013 Troy D. Hanson (http://troydhanson.github.com/uthash/)
-License: BSD-2-clause
-
-Files: debian/*
-Copyright: 2014 Boris Pek <tehnick-8@mail.ru>
-License: BSD-2-clause
-
-License: BSD-2-clause
- Redistribution and use in source and binary forms, with or without
- modification, are permitted provided that the following conditions
- are met:
+Copyright: Andrey Bondrov <andrey.bondrov@rosalab.ru>
+	   Boris Pek <tehnick-8@yandex.ru>
+           Craig Drummond <craig.p.drummond@gmail.com>
+           Sven-Hendrik Haase <sh@lutzhaase.com>
+           Yichao Yu <yyc1992@gmail.com>
+License: relicensed under LGPLv2.1+ on Nov. 14th 2013
+ This relicensing have got permissions from all contributors of QtCurve.
  .
- 1. Redistributions of source code must retain the above copyright
-    notice, this list of conditions and the following disclaimer.
- 2. Redistributions in binary form must reproduce the above copyright
-    notice, this list of conditions and the following disclaimer in the
-    documentation and/or other materials provided with the distribution.
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2.1 of the License, or (at your option) any later version.
  .
- THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
- IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
- OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
- IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
- INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
- NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
- DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
- THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
- THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-License: LGPL-2.1 or LGPL-3+
- This program is free software; you can redistribute it and/or modify
- it under the terms of the GNU Lesser General Public License as
- published by the Free Software Foundation; either version 2.1 of the
- License, or (at your option) version 3, or any later version accepted
- by the membership of KDE e.V. (or its successor approved by the
- membership of KDE e.V.), which shall act as a proxy defined in
- Section 6 of version 3 of the license.
- .
- This program is distributed in the hope that it will be useful,
+ This library is distributed in the hope that it will be useful,
  but WITHOUT ANY WARRANTY; without even the implied warranty of
  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  Lesser General Public License for more details.
  .
  You should have received a copy of the GNU Lesser General Public
- License along with this library. If not,
- see <http://www.gnu.org/licenses/>.
- .
- On Debian systems, the complete text of the GNU Lesser General Public License
- can be found in `/usr/share/common-licenses/LGPL-2.1'.
+ License along with this library; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
-License: Expat
- Permission is hereby granted, free of charge, to any person obtaining a copy
- of this software and associated documentation files (the "Software"), to
- deal in the Software without restriction, including without limitation the
- rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
- sell copies of the Software, and to permit persons to whom the Software is
- furnished to do so, subject to the following conditions:
+Files: debian/*
+Copyright: 2007-2008 Bastian Venthur <venthur@debian.org>
+ 2009-2010 Fathi Boudra <fabo@debian.org>
+ 2012 Boris Pek <tehnick-8@mail.ru>
+ 2014 Scarlett Clark <scarlett@scarlettgatelyclark.com>
+License: GPL-2+
+
+License: GPL-2+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
  .
- The above copyright notice and this permission notice shall be included in
- all copies or substantial portions of the Software.
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
  .
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
- FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
- IN THE SOFTWARE.
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <http://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU General
+ Public License can be found in `/usr/share/common-licenses/GPL-2'.
