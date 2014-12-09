@@ -3,14 +3,50 @@
 
 include /usr/share/pkg-kde-tools/qt-kde-team/3/debian-qt-kde.mk
 
+# Split build into qt5 and qt4+gtk+otherthings.
+# KDE5 and KF5 can not be used at the same time as they would override the same
+# variables making the result paths somewhat non-deterministic.
+# Short of repairing the CMake structure to enable for building things at the
+# same time we do two builds.
+# First we build the qt5 component only, then build the qt4 version which
+# for the time being operates as our base level of compatibility.
+# Subsequently we install qt5 and qt4 on top of it. The reason for this is
+# that there is also a very concerning mixing of variables going on with
+# the kde4/qt4 plugin. For example QTC_KDE4_PREFIX will ultimately be injected
+# into the GTK2 style for configuratino lookup and the likes. So in order to
+# preserve compatibility there we consider qt4 the base rather than qt5 as
+# the qt5 version has no such integration into the GTK2 plugin (none that
+# one could find anyway).
+#                                                      - Harald Sitter, Dec 2014
+
+DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
+QT4_BUILD_DIR = "obj-$(DEB_HOST_MULTIARCH)-qt4"
+
+override_dh_auto_clean:
+	$(overridden_command)
+	rm -rf $(QT5_BUILD_DIR)
+
 override_dh_auto_configure:
 	$(overridden_command) -- \
-		-DCMAKE_INSTALL_PREFIX=/usr \
 		-DENABLE_QT5=on \
+		-DQTC_QT5_ENABLE_KDE=on \
+		-DENABLE_QT4=off \
+			-DQTC_KDE4_PREFIX="" \
+			-DQTC_QT4_STYLE_SUPPORT=off \
+		-DENABLE_GTK2=off \
+		-DENABLE_TEST=off \
+		-DQTC_INSTALL_PO=off
+	$(overridden_command) --builddirectory=$(QT4_BUILD_DIR) -- \
+		-DENABLE_QT5=off \
+		-DQTC_QT5_ENABLE_KDE=off \
 		-DENABLE_QT4=on \
 			-DQT_QMAKE_EXECUTABLE=/usr/bin/qmake-qt4 \
 			-DQTC_QT4_ENABLE_KWIN=off
 
-override_dh_fixperms:
-	chmod +x debian/kde-style-qtcurve4/usr/share/themes/QtCurve/gtk-2.0/map_kde_icons.pl
+override_dh_auto_build:
 	$(overridden_command)
+	$(overridden_command) --builddirectory=$(QT4_BUILD_DIR)
+
+override_dh_auto_install:
+	$(overridden_command)
+	$(overridden_command) --builddirectory=$(QT4_BUILD_DIR)
