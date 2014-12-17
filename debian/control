@@ -1,7 +1,7 @@
 Source: kde-style-qtcurve
 Section: kde
 Priority: optional
-Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Maintainer: Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 XSBC-Original-Maintainer: Boris Pek <tehnick-8@mail.ru>
 Build-Depends: cmake,
                debhelper (>= 9.0.0),
