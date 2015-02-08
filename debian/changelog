@@ -1,3 +1,9 @@
+qtcurve (1.8.18-3) experimental; urgency=medium
+
+  * Add patch to fix build with QT 5.3. (Closes: #777128)
+
+ -- Ritesh Raj Sarraf <rrs@debian.org>  Sun, 08 Feb 2015 20:18:05 +0530
+
 qtcurve (1.8.18-2) experimental; urgency=medium
 
   * Move Qt5 style into separate package kde-style-qtcurve-qt5.
