@@ -68,14 +68,14 @@ Description: QtCurve gtk2 engines
  look between KDE and GTK+ applications, which is easy on the eyes and visually
  pleasing.
 
-Package: libqtcurve-cairo0
+Package: libqtcurve-cairo1
 Section: libs
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: Library used for for common drawing routines.
  This package is only used by the Gtk2 QTCurve widget styles.
 
-Package: libqtcurve-utils1
+Package: libqtcurve-utils2
 Section: libs
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
@@ -101,8 +101,8 @@ Architecture: any
 Depends: gtk2-engines-qtcurve (= ${binary:Version}),
          kde-style-qtcurve4 (= ${binary:Version}),
          kde-style-qtcurve5 (= ${binary:Version}),
-         libqtcurve-cairo0 (= ${binary:Version}),
-         libqtcurve-utils1 (= ${binary:Version}),
+         libqtcurve-cairo1 (= ${binary:Version}),
+         libqtcurve-utils2 (= ${binary:Version}),
          qtcurve-i18n (= ${source:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
