@@ -9,3 +9,5 @@ override_dh_auto_configure:
 		-DENABLE_QT4=on \
 			-DQT_QMAKE_EXECUTABLE=/usr/bin/qmake-qt4 \
 			-DQTC_QT4_ENABLE_KWIN=off
+
+.PHONY: override_dh_auto_test
