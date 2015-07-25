@@ -3,9 +3,7 @@ Debianized-By: Boris Pek <tehnick-8@mail.ru>
 Debianized-Date: Mon, 17 Mar 2014 15:52:04 +0400
 Upstream-Name: QtCurve
 Upstream-Contact: Yichao Yu <yyc1992@gmail.com>
-Source: https://github.com/QtCurve/qtcurve/tags
- The orig.tar.gz is just renamed upstream tarball (without changes).
- See section get-orig-source in debian/rules file for details.
+Source: http://quickgit.kde.org/?p=qtcurve.git
 
 Files: *
 Copyright: 2003-2011 Craig Drummond <craig.p.drummond@googlemail.com>
