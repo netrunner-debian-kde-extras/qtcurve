@@ -8,13 +8,25 @@ CUR_VER = $(shell echo "$(USCAN_REPORT)" | sed -n 's/.*<upstream-version>\(.*\)<
 CUR_URL = $(shell echo "$(USCAN_REPORT)" | sed -n 's/.*<upstream-url>\(.*\)<\/upstream-url>.*/\1/p')
 
 DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
-LDFLAGS += -Wl,--as-needed
+
+# export DEB_CXXFLAGS_MAINT_APPEND = $(shell dpkg-buildflags --get CPPFLAGS)
+# export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
 
 %:
-	dh $@ --parallel --list-missing --with kde
+	dh $@ --parallel --list-missing --with=kf5
 
 override_dh_auto_configure:
-	dh_auto_configure -- -DLIB_INSTALL_DIR="/usr/lib/$(DEB_HOST_MULTIARCH)"
+	dh_auto_configure -- \
+		-DLIB_INSTALL_DIR="/usr/lib/$(DEB_HOST_MULTIARCH)" \
+		-DQT_QMAKE_EXECUTABLE=/usr/bin/qmake-qt4 \
+		-DQTC_QT5_ENABLE_KDE=On \
+		-DQTC_QT5_ENABLE_KWIN=On \
+		-DQTC_QT4_ENABLE_KDE=Off \
+		-DQTC_QT4_ENABLE_KWIN=Off \
+		-DENABLE_TEST=Off
+
+override_dh_builddeb:
+	dh_builddeb -- -Zxz
 
 get-orig-source:
 	wget -c "$(CUR_URL)" -O "$(PACKAGE)_$(CUR_VER).orig.tar.gz"
