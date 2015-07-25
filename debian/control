@@ -52,6 +52,7 @@ Depends: ${misc:Depends}, ${shlibs:Depends}
 Provides: kde-style-qtcurve-qt4
 Recommends: kwin-style-qtcurve
 Suggests: gtk2-engines-qtcurve
+Multi-Arch: same
 Description: QtCurve widget style for applications based on Qt 4.x
  This package contains the QtCurve widget style for Qt 4.x.
  .
