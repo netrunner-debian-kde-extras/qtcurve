@@ -49,6 +49,7 @@ Description: QtCurve widget style for applications based on GTK+ 2.x
 Package: kde-style-qtcurve
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
+Provides: kde-style-qtcurve-qt4
 Recommends: kwin-style-qtcurve
 Suggests: gtk2-engines-qtcurve
 Description: QtCurve widget style for applications based on Qt 4.x
