@@ -1,2 +1,2 @@
 # Symbols control file for this library is useless.
-libqtcurve-utils*: no-symbols-control-file usr/lib/i386-linux-gnu/libqtcurve-utils.so*
+libqtcurve-utils2: no-symbols-control-file usr/lib/i386-linux-gnu/libqtcurve-utils.so*
