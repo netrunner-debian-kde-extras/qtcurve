@@ -1,3 +1,13 @@
+qtcurve (1.8.18+git20150711-a3fff13-2) experimental; urgency=medium
+
+  * Update debian/control:
+    - delete kwin-style-qtcurve from Recommends of package kde-style-qtcurve
+    - move gtk2-engines-qtcurve from Suggests to Recommends of package
+      kde-style-qtcurve
+    - remove kwin-style-qtcurve from Depends of metapackage qtcurve
+
+ -- Boris Pek <tehnick@debian.org>  Sun, 26 Jul 2015 11:39:21 +0300
+
 qtcurve (1.8.18+git20150711-a3fff13-1) experimental; urgency=medium
 
   * Upstream Git snapshot (1.8.18-242-ga3fff13) is taken from:
