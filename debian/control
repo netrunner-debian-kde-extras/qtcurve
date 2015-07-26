@@ -20,6 +20,8 @@ Build-Depends: cmake,
                libqt5svg5-dev,
                libqt5x11extras5-dev,
                libx11-dev,
+               libxcb1-dev,
+               pkg-config,
                pkg-kde-tools,
                qtbase5-dev,
                qtbase5-private-dev
