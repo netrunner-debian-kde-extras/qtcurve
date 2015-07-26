@@ -1,3 +1,42 @@
+qtcurve (1.8.18+git20150711-a3fff13-1) experimental; urgency=medium
+
+  * Upstream Git snapshot (1.8.18-242-ga3fff13) is taken from:
+    http://quickgit.kde.org/?p=qtcurve.git
+  * Localization files are taken from last stable release (1.8.18).
+  * Fixed in upstream:
+    - gtk2-engines-qtcurve: inkscape 0.91 crashes after palette mouse-over
+      (Closes: #786831)
+    - gtk2-engines-qtcurve: massive memory leak in mysql-workbench
+      (Closes: #682162)
+  * Update debian/patches:
+    - delete qt53-build-fix.diff (fixed in upstream)
+    - add enable-translations.patch
+  * Update debian/control:
+    - bump Standards-Version to 3.9.6 (was 3.9.5): no changes required
+    - update Build-Depends for transition from KDE4 to KF5:
+      + delete dependencies from: kdebase-workspace-dev and qtdeclarative5-dev
+      + add dependencies from: extra-cmake-modules, kio-dev,
+        libkf5archive-dev, libkf5config-dev, libkf5configwidgets-dev,
+        libkf5i18n-dev, libkf5kdelibs4support-dev, libkf5widgetsaddons-dev,
+        libkf5xmlgui-dev, libqt5x11extras5-dev, libxcb1-dev, pkg-config
+        [Thanks to Scarlett Clark]
+    - delete package kwin-style-qtcurve: it is not available for KF5 yet
+      (LP: #1452218)
+    - package kde-style-qtcurve now provides package kde-style-qtcurve-qt4
+    - package kde-style-qtcurve is "Multi-Arch: same" now
+    - metapackage qtcurve now depends on kde-style-qtcurve-qt5 and recommends
+      kwin-decoration-oxygen, oxygen-icon-theme and oxygencursors
+  * Update debian/rules:
+    - build using kf5 libraries instead of kde4
+    - update configure flags
+    - use xz compression in packages
+  * Update debian/kde-style-qtcurve.install:
+    there are no KDE4 related files anymore.
+  * Update debian/kde-style-qtcurve-qt5.install.
+  * Update debian/copyright.
+
+ -- Boris Pek <tehnick@debian.org>  Sun, 26 Jul 2015 04:17:05 +0300
+
 qtcurve (1.8.18-3) experimental; urgency=medium
 
   * Add patch to fix build with QT 5.3. (Closes: #777128)
