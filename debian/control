@@ -37,7 +37,7 @@ Depends: ${misc:Depends},
          ${misc:Pre-Depends},
          ${perl:Depends},
          ${shlibs:Depends}
-Recommends: kde-style-qtcurve
+Recommends: kde-style-qtcurve-qt4, kde-style-qtcurve-qt5
 Multi-Arch: same
 Description: QtCurve widget style for applications based on GTK+ 2.x
  This package contains the QtCurve theme engine for GTK+ 2.x.
@@ -48,11 +48,13 @@ Description: QtCurve widget style for applications based on GTK+ 2.x
  consistent look between KDE, GNOME and other applications based on these
  libraries, which is easy on the eyes and visually pleasing.
 
-Package: kde-style-qtcurve
+Package: kde-style-qtcurve-qt4
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
-Provides: kde-style-qtcurve-qt4
-Recommends: gtk2-engines-qtcurve
+Provides: kde-style-qtcurve
+Replaces: kde-style-qtcurve
+Conflicts: kde-style-qtcurve
+Recommends: gtk2-engines-qtcurve, kde-style-qtcurve-qt5
 Multi-Arch: same
 Description: QtCurve widget style for applications based on Qt 4.x
  This package contains the QtCurve widget style for Qt 4.x.
@@ -67,7 +69,7 @@ Description: QtCurve widget style for applications based on Qt 4.x
 Package: kde-style-qtcurve-qt5
 Architecture: any
 Depends: ${misc:Depends}, ${misc:Pre-Depends}, ${shlibs:Depends}
-Recommends: kde-style-qtcurve
+Recommends: gtk2-engines-qtcurve, kde-style-qtcurve-qt4
 Multi-Arch: same
 Description: QtCurve widget style for applications based on Qt 5.x
  This package contains the QtCurve widget style for Qt 5.x.
@@ -97,7 +99,7 @@ Package: qtcurve
 Section: metapackages
 Architecture: any
 Depends: gtk2-engines-qtcurve,
-         kde-style-qtcurve,
+         kde-style-qtcurve-qt4,
          kde-style-qtcurve-qt5,
          qtcurve-l10n,
          ${misc:Depends}
@@ -109,7 +111,7 @@ Description: unified widget styles for Qt and GTK+ applications (metapackage)
  consistent look between KDE, GNOME and other applications based on these
  libraries, which is easy on the eyes and visually pleasing.
 
-Package: libqtcurve-utils1
+Package: libqtcurve-utils2
 Architecture: any
 Depends: ${misc:Depends}, ${misc:Pre-Depends}, ${shlibs:Depends}
 Multi-Arch: same
