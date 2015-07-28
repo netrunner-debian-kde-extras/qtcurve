@@ -54,7 +54,8 @@ Depends: ${misc:Depends}, ${shlibs:Depends}
 Provides: kde-style-qtcurve
 Replaces: kde-style-qtcurve
 Conflicts: kde-style-qtcurve
-Recommends: gtk2-engines-qtcurve, kde-style-qtcurve-qt5
+Recommends: kde-style-qtcurve-qt5
+Suggests: gtk2-engines-qtcurve
 Multi-Arch: same
 Description: QtCurve widget style for applications based on Qt 4.x
  This package contains the QtCurve widget style for Qt 4.x.
@@ -69,7 +70,7 @@ Description: QtCurve widget style for applications based on Qt 4.x
 Package: kde-style-qtcurve-qt5
 Architecture: any
 Depends: ${misc:Depends}, ${misc:Pre-Depends}, ${shlibs:Depends}
-Recommends: gtk2-engines-qtcurve, kde-style-qtcurve-qt4
+Suggests: gtk2-engines-qtcurve, kde-style-qtcurve-qt4
 Multi-Arch: same
 Description: QtCurve widget style for applications based on Qt 5.x
  This package contains the QtCurve widget style for Qt 5.x.
@@ -103,7 +104,7 @@ Depends: gtk2-engines-qtcurve,
          kde-style-qtcurve-qt5,
          qtcurve-l10n,
          ${misc:Depends}
-Recommends: kwin-decoration-oxygen, oxygen-icon-theme, oxygencursors
+Suggests: kwin-decoration-oxygen, oxygen-icon-theme
 Description: unified widget styles for Qt and GTK+ applications (metapackage)
  This package installs all packages related with QtCurve.
  .
@@ -114,6 +115,8 @@ Description: unified widget styles for Qt and GTK+ applications (metapackage)
 Package: libqtcurve-utils2
 Architecture: any
 Depends: ${misc:Depends}, ${misc:Pre-Depends}, ${shlibs:Depends}
+Replaces: libqtcurve-utils1 (>= 1.8.18+git20150711-a3fff13-1)
+Breaks: libqtcurve-utils1 (>= 1.8.18+git20150711-a3fff13-1)
 Multi-Arch: same
 Description: common library for QtCurve
  This package contains common library for QtCurve.
