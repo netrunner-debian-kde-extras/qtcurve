@@ -1,3 +1,18 @@
+qtcurve (1.8.18+git20150711-a3fff13-5) unstable; urgency=medium
+
+  * Update debian/control:
+    - package libqtcurve-utils2 now Breaks and Replaces libqtcurve-utils1
+      (>= 1.8.18+git20150711-a3fff13-1)
+    - move gtk2-engines-qtcurve from Recommends to Suggests in package
+      kde-style-qtcurve-qt4
+    - move gtk2-engines-qtcurve and kde-style-qtcurve-qt4 from Recommends to
+      Suggests in package kde-style-qtcurve-qt5
+    - move kwin-decoration-oxygen and oxygen-icon-theme from Recommends to
+      Suggests in metapackage qtcurve
+  * Simplify debian/gtk2-engines-qtcurve.lintian-overrides.
+
+ -- Boris Pek <tehnick@debian.org>  Wed, 29 Jul 2015 01:24:17 +0300
+
 qtcurve (1.8.18+git20150711-a3fff13-4) unstable; urgency=medium
 
   * Move package to unstable: no changes required.
