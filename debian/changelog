@@ -1,3 +1,10 @@
+qtcurve (1.8.18+git20150711-a3fff13-4) unstable; urgency=medium
+
+  * Move package to unstable: no changes required.
+  * This package replaces src:gtk2-engines-qtcurve and src:kde-style-qtcurve.
+
+ -- Boris Pek <tehnick@debian.org>  Tue, 28 Jul 2015 08:56:32 +0300
+
 qtcurve (1.8.18+git20150711-a3fff13-3) experimental; urgency=medium
 
   * Update debian/control:
